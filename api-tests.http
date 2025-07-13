@@ -1,0 +1,43 @@
+### Variables
+@baseUrl = http://localhost:8080
+@cartId = {{cartId}}
+
+### Create Cart
+POST {{baseUrl}}/api/carts
+Content-Type: application/json
+
+{
+  "countryCode": "US",
+  "currency": "USD",
+  "products": [
+    {
+      "productId": "PROD-001",
+      "description": "Wireless Bluetooth Headphones",
+      "category": "ELECTRONICS",
+      "price": 99.99
+    }
+  ]
+}
+
+### Get All Carts
+GET {{baseUrl}}/api/carts
+
+### Get Cart by ID
+GET {{baseUrl}}/api/carts/{{cartId}}
+
+### Add Product to Cart
+PUT {{baseUrl}}/api/carts/{{cartId}}/products
+Content-Type: application/json
+
+{
+  "productId": "PROD-002",
+  "description": "Gaming Mouse",
+  "category": "ELECTRONICS",
+  "price": 45.50
+}
+
+### Get Cart Products
+GET {{baseUrl}}/api/carts/{{cartId}}/products
+
+### Remove Product from Cart
+DELETE {{baseUrl}}/api/carts/{{cartId}}/products/PROD-002
