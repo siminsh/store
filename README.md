@@ -211,10 +211,3 @@ For detailed API testing examples and sample data, refer to [API-Testing-Guide.m
    - Clean and rebuild: `./gradlew clean build`
    - Check Java version: `java -version`
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For questions or issues, please open an issue in the repository or contact the development team.
